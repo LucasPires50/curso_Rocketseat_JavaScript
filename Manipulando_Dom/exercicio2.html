@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="app">
+        <button onmouseover="passarEmCimaDoBotao()">Clicar aqui</button>
+        </br></br>
+        <div class="box"></div>
+    </div>
+
+    <script>
+        //selecinar a div 
+        var boxElement = document.querySelector('.box');
+
+        //função que executa quando clica no botão
+        function passarEmCimaDoBotao() {
+
+            //esse função gera corres aleatórias
+            function getRandomColor() {
+                var letters = "0123456789ABCDEF";
+                var color = "#";
+                for (var i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+            var newColor = getRandomColor();
+
+            //adicionar estilo
+            boxElement.style.width = '100px';
+            boxElement.style.height = '100px';
+            boxElement.style.backgroundColor = newColor;
+        }
+    </script>
+</body>
+
+</html>

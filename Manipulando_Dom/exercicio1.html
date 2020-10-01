@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="app">
+        <button onclick="clicarBotao()">Clicar aqui</button>
+        </br></br>
+        <div class="box"></div>      
+    </div>
+
+    <script>
+        //selecinar a div 
+        var boxElement = document.querySelector('.app');
+        
+        //função que executa quando clica no botão
+        function clicarBotao() {
+            //cria uma div
+            var box = document.createElement('div')
+
+            //adicionar estilo
+            box.style.width = '100px';
+            box.style.height = '100px';
+            box.style.backgroundColor = '#f00';
+
+            //sempre que o botão for clicado vai adicionar um novo filho
+            boxElement.appendChild(box);
+        }
+    </script>
+</body>
+
+</html>
