@@ -9,7 +9,7 @@ xhr.send(null);
 
 //Validação para retonar as informação do servidor
 xhr.onreadystatechange = function(){
-    
+    // "4" é a variavel que siginifica, quando a resposta do servidor volto.
     if (xhr.readyState === 4) {
         console.log(JSON.parse(xhr.responseText));        
     }
